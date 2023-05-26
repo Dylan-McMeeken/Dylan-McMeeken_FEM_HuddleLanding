@@ -1,0 +1,420 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px; 
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html, 
+body {
+    height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+}
+
+/* variables */ 
+
+:root {
+    --font-pop:'Poppins', sans-serif;
+    --font-sans:'Open Sans', sans-serif; 
+}
+
+/* Styling */ 
+
+body {
+    background-image: url("images/bg-hero-mobile.svg");
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.5rem 1rem ;
+    background-color:rgba(235, 251, 255, 0.7) ;
+}
+
+header img {
+    height: 30%;
+    width: 30%;
+}
+
+header button {
+    border: none;
+    font-family: var(--font-pop);
+    font-size: 0.6rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    color: black;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 5px rgb(218, 218, 218);
+}
+
+.hero {
+    padding: 1.7rem 2rem 2rem 2rem;
+    background-color:rgba(235, 251, 255, 0.6) ;
+}
+
+.hero-box{
+    text-align: center;
+}
+
+.hero-box h1 {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-box p {
+    font-family: var(--font-sans); 
+    font-weight: 400;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.hero-box button {
+    margin-bottom: 2.5rem;
+}
+
+.started {
+    padding: 0.5rem 3rem;
+    border: none;
+    color: hsl(193, 100%, 96%);
+    background-color:hsl(322, 100%, 66%);
+    border-radius: 2rem;
+    font-family: var(--font-pop);
+    font-size: 0.7rem;
+    box-shadow: 0.5px 0.5px 5px rgb(189, 189, 189);
+}
+
+.tile {
+  margin: 2rem 1rem 0 1rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0.5px 0.5px 5px rgb(226, 226, 226);
+}
+
+.tile h2 {
+  font-size: 1.2rem;
+  font-family: var(--font-pop);
+  padding: 1rem;
+}
+
+.tile p {
+  padding: 0 2rem 2rem 2rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.tile img {
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+}
+
+.com {
+  width: 92%;
+  text-align: center;
+  margin: 3rem auto 0 auto;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+  bottom: -4rem;
+  background-color: white;
+  max-width: 500px;
+  box-shadow: 0.5px 0.5px 5px rgb(226, 226, 226);
+}
+
+.com h3 {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-pop);
+  font-size: 1rem;
+}
+
+footer {
+  background-color:hsl(192, 100%, 9%);
+  padding: 8rem 1rem 3rem 1rem;
+}
+
+.contact img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-logo {
+  width: 50%;
+  padding-bottom: 1.5rem;
+}
+
+.location, .phone, .email {
+  display: flex;
+  margin-bottom: 1.5rem; 
+  font-family: var(--font-sans);
+}
+
+.location img, .phone img, .email img {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.3rem;
+  margin-right: 1.5rem;
+}
+
+.email img {
+  height: 15px;
+}
+
+.location p, .phone p, .email p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: hsl(193, 100%, 96%);
+}
+
+.d1 ul{
+  margin-top: 3.5rem;
+}
+
+
+.d1 ul, .d2 ul {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  list-style-type: none;
+  color: hsl(193, 100%, 96%);
+}
+
+.d1 ul li, .d2 ul li {
+  margin-bottom: 1rem;
+}
+
+.social {
+  filter: brightness(0) invert(1);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  border: solid 1px white;
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+
+/*Actives*/ 
+
+.started:hover {
+  opacity: 0.6;
+}
+
+header button:hover {
+  opacity: 0.6;
+}
+
+@media  screen and (min-width:1000px) {
+  .tile{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media  screen and (min-width:1440px) {
+
+body {
+    background-image: url("images/bg-hero-desktop.svg");
+}
+
+
+header {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2rem 2.5rem ;
+    
+}
+
+header img {
+    height: 15%;
+    width: 15%;
+}
+
+header button {
+  font-size: 0.8rem;
+  padding: 0.8rem 3rem;
+  box-shadow: 0.5px 0.5px 5px rgb(218, 218, 218);
+}
+
+.hero {
+  padding: 1.7rem 3rem 5.4rem 3rem;
+  display: flex;
+}
+
+.hero-box{
+  width: 50%;
+  padding-right: 3rem;
+  text-align: left;
+}
+
+.hero img {
+  width: 50%;
+}
+
+.hero-box h1 {
+  font-size: 2.5rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
+}
+
+.hero-box p {
+  font-weight: 400;
+  padding: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.hero-box button {
+  margin-bottom: 2.5rem;
+}
+
+.started {
+  padding: 1rem 4rem;
+  font-size: 0.8rem;
+}
+
+.tiles {
+  margin-top: 7rem;
+}
+
+.tile {
+    max-width: 100%;
+    margin: 2rem 4rem 0 4rem;
+    display: flex;
+    justify-content:space-between ;
+    padding-left: 5%;
+}
+
+.tile-info {
+  width: 50%;
+  margin: auto 0;
+}
+
+.tile img {
+  width: 40%;
+}
+
+.grow, .users {
+  flex-direction:row-reverse ;
+  text-align: left;
+}
+
+.grow h2, .users h2, .flow h2{
+  margin-left: 1rem;
+  font-size: 1.4rem;
+}
+
+.grow p, .users p, .flow p{
+  flex-direction:row-reverse ;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.flow h2 {
+  text-align: left;
+} 
+
+.com {
+  max-width: 700px;
+}
+
+.com h3 {
+  font-size: 1.4rem;
+}
+
+footer {
+  display: flex;
+  gap: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.contact {
+  width: 33%;
+}
+
+.directory {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.social {
+  width: 33%;
+}
+
+.d1 ul{
+  margin-top: 0;
+}
+
+.social{
+  position: relative;
+  top: 3rem;
+  max-height: 5rem;
+}
+
+
+}
+
